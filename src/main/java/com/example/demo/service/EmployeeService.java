@@ -23,5 +23,9 @@ public class EmployeeService {
 	public void updatePhoneNumber(String firstName, String newPhoneNumber) {
 		updateEmployeeRepository.updatePhoneNumber(firstName, newPhoneNumber);
 	}
+	
+	public Integer getEmployeesCountByFirstName(String firstName) {
+		return updateEmployeeRepository.getEmployeesCountByFirstName(firstName);
+	}
 
 }

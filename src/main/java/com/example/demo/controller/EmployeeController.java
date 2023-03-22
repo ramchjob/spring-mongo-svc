@@ -30,5 +30,11 @@ public class EmployeeController {
 		employeeService.updatePhoneNumber(firstName, phoneNumber);
 		return ResponseEntity.ok().build();
 	}
+	
+	@GetMapping("/{firstName}")
+	public ResponseEntity<Integer> getCountByFirstName(@PathVariable("firstName") String firstName) {
+		Integer count = employeeService.getEmployeesCountByFirstName(firstName);
+		return ResponseEntity.ok(count);
+	}
 
 }
